@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Kaushan+Script|Droid+Serif:400,700,400italic,700italic|Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 	<link rel="icon" href="./images/GES-X_logo.PNG?version=1" type="image/x-icon">
 
     <!-- Custom styles for this template -->
@@ -114,89 +117,134 @@
     <!-- video banner row -->
     
   </div>
-  <div class="container custom-container">
-    <div class="row justify-content-center">
-      <div class="col-md-12" style="padding: 15px;">
-        <h4 class="section-subheading" style="text-align: left; margin-top: 40px;">Examples</h4>
-        
-        <div style="margin-bottom: 20px; text-align: left;">
-          <b>Shape Description</b>: The person in the picture has an average build with broad shoulders and a rectangular - shaped body, presenting a balanced and natural male physique.
-        </div>
-        <div style="margin-bottom: 20px; text-align: left;">
-          <b>Beta Parameters</b>:[ 0.4084903  -0.15353578  0.3960117  -0.67583245 -0.35227847 -0.54830325
-          0.32562461  0.48370904  0.62038946  0.3192492 ]
-        </div>
-  
-        <div class="row" style="text-align: center;">
-          <div class="col-md-6">
-            <b>Dancer Image</b>
-            <img src="./images/dancer.png" alt="Example" class="img-fluid" style="max-width: 100%;">
-          </div>
-          <div class="col-md-6">
-            <b>Video Example</b>
-            <video controls class="d-block w-100">
-              <source src="./videos/dataset_demo.mov" type="video/mp4">
-            </video>
+  <div id="exampleCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Example 1 -->
+      <div class="carousel-item active">
+        <div class="container custom-container">
+          <div class="row justify-content-center">
+            <div class="col-md-12" style="padding: 15px;">
+              <h4 class="section-subheading" style="text-align: left; margin-top: 40px;">Example 1</h4>
+              <div style="margin-bottom: 20px; text-align: left;">
+                <b>Shape Description</b>: The person has an average build, with slightly broad shoulders and a straight torso.
+              </div>
+              <div style="margin-bottom: 20px; text-align: left;">
+                <b>Beta Parameters</b>: [-0.1494, -0.1356, 0.3680, 0.9192, 0.3316, -0.2982, -0.1908, -0.0179, -0.2225, 0.2982]
+              </div>
+              <div class="row" style="text-align: center;">
+                <div class="col-md-6">
+                  <b>Dancer Image</b>
+                  <img src="./images/dancer1.png" alt="Example" class="img-fluid" style="max-width: 100%;">
+                </div>
+                <div class="col-md-6">
+                  <b>Video Example</b>
+                  <video controls class="d-block w-100">
+                    <source src="./videos/dataset_demo1.mov" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+
+
+      <!-- Example 2 -->
+      <div class="carousel-item">
+        <div class="container custom-container">
+          <div class="row justify-content-center">
+            <div class="col-md-12" style="padding: 15px;">
+              <h4 class="section-subheading" style="text-align: left; margin-top: 40px;">Example 2</h4>
+
+              <div style="margin-bottom: 20px; text-align: left;">
+                <b>Shape Description</b>: The person has a slender, well-proportioned figure with long legs, a trim waist, and a balanced upper body.
+              </div>
+              <div style="margin-bottom: 20px; text-align: left;">
+                <b>Beta Parameters</b>: [-0.9840, 1.8849, 1.4813, -0.2415, -0.2365, 0.3467, 0.2756, 0.1533, -0.1296, 0.6026]
+              </div>
+
+              <div class="row" style="text-align: center;">
+                <!-- Dancer Image -->
+                <div class="col-md-6 d-flex flex-column align-items-center">
+                  <b>Dancer Image</b>
+                  <div style="width: 100%; max-width: 330px; aspect-ratio: 9 / 16; overflow: hidden;">
+                    <img src="./images/dancer2.jpg"
+                          alt="Example"
+                          class="img-fluid"
+                          style="width: 100%; height: 100%; object-fit: contain;">
+                  </div>
+                </div>
+              
+                <!-- Video Example -->
+                <div class="col-md-6 d-flex flex-column align-items-center">
+                  <b>Video Example</b>
+                  <div style="width: 100%; max-width: 330px; aspect-ratio: 9 / 16; overflow: hidden;">
+                    <video controls
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                      <source src="./videos/dataset_demo2.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 3 -->
+      <div class="carousel-item">
+        <div class="container custom-container">
+          <div class="row justify-content-center">
+            <div class="col-md-12" style="padding: 15px;">
+              <h4 class="section-subheading" style="text-align: left; margin-top: 40px;">Example 3</h4>
+
+              <div style="margin-bottom: 20px; text-align: left;">
+                <b>Shape Description</b>: The person has a sturdy, athletic, and robust build with a broader, solid torso and strong, muscular legs.
+              </div>
+              <div style="margin-bottom: 20px; text-align: left;">
+                <b>Beta Parameters</b>: [-0.5522, -0.9754, 1.0944, 0.0837, 0.7991, -0.1677, -0.1184, 0.2174, -0.5869, 0.9863]
+              </div>
+
+              <div class="row" style="text-align: center;">
+                <!-- Dancer Image -->
+                <div class="col-md-6 d-flex flex-column align-items-center">
+                  <b>Dancer Image</b>
+                  <div style="width: 100%; max-width: 330px; aspect-ratio: 9 / 16; overflow: hidden;">
+                    <img src="./images/dancer3.jpg"
+                         alt="Example"
+                         class="img-fluid"
+                         style="width: 100%; height: 100%; object-fit: contain;">
+                  </div>
+                </div>
+              
+                <!-- Video Example -->
+                <div class="col-md-6 d-flex flex-column align-items-center">
+                  <b>Video Example</b>
+                  <div style="width: 100%; max-width: 330px; aspect-ratio: 9 / 16; overflow: hidden;">
+                    <video controls
+                           style="width: 100%; height: 100%; object-fit: contain;">
+                      <source src="./videos/dataset_demo3.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#exampleCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#exampleCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
   </div>
-  <!-- <div class="row">
-    <div class="col-md-6" style="text-align:left; padding: 15px;">
-      <h4 class="section-subheading" style="margin-top: 40px;">Examples</h4>
-      
-      <div style="margin-bottom: 20px;">
-        <h6>Description</h6>
-        <p style="color: rgb(171, 171, 171)">
-          Some video-pose examples in the GES-X dataset. Original video clips are shown on the left, and the corresponding pose sequences are shown on the right.
-        </p>
-      </div>
-  
-      <div style="margin-bottom: 20px;">
-        <h6>Beta Parameters</h6>
-        <p style="color: rgb(171, 171, 171)">
-          Detailed information about the beta parameters used in the dataset.
-        </p>
-      </div>
-  
-      <div class="row">
-        <div class="col-md-6">
-          <h6>Image Example</h6>
-          <img src="./images/example_image.jpg" alt="Example" class="img-fluid" style="max-width: 100%;">
-        </div>
-        <div class="col-md-6">
-          <h6>Video Example</h6>
-          <video controls class="d-block w-100">
-            <source src="./videos/dataset_demo.mov" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div> -->
-</div>
-
-
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center" style="margin-bottom: -30px">
-        <h2 class="section-heading text-uppercase" style="color: rgb(90, 90, 90); margin-top: 90px">GES-X Statistics</h2>
-        <h3 class="section-subheading" style="color: rgb(171, 171, 171)">Dataset Analysis and Statistics</h3>
-      </div>
-    </div>
-	<h5 class="section-subheading" style="text-align:left; color: rgb(100, 100, 100); margin-top: 20px"> Overview of GES-X Dataset:</h5>
-	    <div class="row justify-content-md-center text-center">
-      <div class="col-md centered" style="padding:1rem;">
-        <img src="./images/dataset_table.jpg" style="width: 90%" class="img-responsive"/> 
-      </div>
-      <p class="text-muted" style="text-align:left; margin-left:15px"> 
-		Statistics comparison of our GES-X with existing ones. The dotted line “- - -” separates
-    whether the posture in the dataset is built based on the mesh. As for the duration of meshed whole body
-    co-speech gesture datasets, our GES-X is 15 times of the second best one (i.e.BEAT2).
-      </p>
-    </div>
-	
-	</br> -->
 </section>
 
 <!-- Model -->
@@ -218,8 +266,6 @@
       <img src="./images/Fig1.jpg" style="width: 100%" class="img-responsive"/> 
     </div>
 
-
-</br>
 	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">ShapeRhythm Framework</h5>
 	    <!-- <div class="row justify-content-md-center text-center"> -->
       <div class="col-md centered" style="padding:1rem; margin-top:20px; ">
@@ -255,7 +301,7 @@
         FreeShape is a delicate shape similarity matching approach designed to enhance dance personalization by enabling freestyle and open-vocabulary text-guided body shape conversion
       </p>
     <div class="row">
-      <img src="./images/freeshape.jpg" style="width: 100%" class="img-responsive"/> 
+      <img src="./images/freeshape.png" style="width: 100%" class="img-responsive"/> 
     </div>
   </div>
 </div>
@@ -511,6 +557,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
+    <script>
+      // 在轮播图切换时暂停所有视频
+      document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.getElementById('exampleCarousel');
+        carousel.addEventListener('slide.bs.carousel', function () {
+          const videos = carousel.querySelectorAll('video');
+          videos.forEach(video => {
+            video.pause();
+            video.currentTime = 0; // 如果你还想重置到开头
+          });
+        });
+      });
+    </script>
   </body>
 </html>
