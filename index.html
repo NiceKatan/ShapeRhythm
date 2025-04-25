@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+
+    <title>ShapeRhythm</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Kaushan+Script|Droid+Serif:400,700,400italic,700italic|Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+	<link rel="icon" href="./images/GES-X_logo.PNG?version=1" type="image/x-icon">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/agency.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        /* Custom styles for the carousel controls */
+        .carousel-control-prev, .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .carousel-control-prev {
+            left: 20px;
+        }
+
+        .carousel-control-next {
+            right: 20px;
+        }
+    </style>
+    
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav", style = "background-color: rgba(71, 106, 126, 0.779)">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"> <img style="width:10em;" src="./images/Logo.png" alt="Logo">
+          <p style="width:8em; font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; font-style: italic; color: white; margin-top:-10px; margin-left:3px">Personalized and Harmonic Dance Generation Bridging Diverse Bodies and Melodies</p></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item" style="font-size: 110%">
+              <a class="nav-link js-scroll-trigger" href="#dataset">Dataset</a>
+            </li>
+            <li class="nav-item" style="font-size: 110%">
+              <a class="nav-link js-scroll-trigger" href="#model">Model</a>
+            </li>
+            <li class="nav-item" style="font-size: 110%">
+              <a class="nav-link js-scroll-trigger" href="#results">results</a>
+            </li>
+			      <li class="nav-item" style="font-size: 110%">
+              <a class="nav-link js-scroll-trigger" href="#experiments">experiments</a>
+            </li>
+            <!-- <li class="nav-item" style="font-size: 110%">
+              <a class="nav-link js-scroll-trigger" href="#metadata">metadata</a>
+            </li> -->
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+            <div class="row align-items-center intro-text">
+              <!-- <div class="intro-lead-in" style="margin-left: 80px">CoCoGesture</div> -->
+              <!-- <video controls class="d-block w-100">
+                <source src="./videos/ges_demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video> -->
+              <div class="intro-lead-in">ShapeDancer Dataset</div>
+              <div>
+                  <p>ShapeDancer is a multimodal dance generation dataset that contains rich dance sequence information and dancer body shape information, namely body shape text description, which aims to solve the problem of lack of body shape perception in existing music-driven dance datasets.</p >
+              </div>
+        </div>
+      </div>
+    </header>
+
+<!-- Dataset -->
+<section class="bg-transparent" id="dataset">
+  <div class="container">
+    <div class="row">
+      <!-- news column -->
+      <div class="col-md-12">
+        <h4 class="service-heading">Each Dance Sequence Includes:</h4>
+        <ul class="text-muted">
+          <li class="text-muted">Original WAV format music files with totally 10+ music types.</li>
+          <li class="text-muted">SMPL parameters, including 10 shape parameters \(\beta\) and 24 pose parameters \(\theta\) along with the translation.</li>
+          <li class="text-muted">Parameter-aligned text descriptions of the dancer bodyshape.</li>
+        </ul>
+      </div>
+
+    <!-- video banner row -->
+    
+  </div>
+  <div class="container custom-container">
+    <div class="row justify-content-center">
+      <div class="col-md-12" style="padding: 15px;">
+        <h4 class="section-subheading" style="text-align: left; margin-top: 40px;">Examples</h4>
+        
+        <div style="margin-bottom: 20px; text-align: left;">
+          <b>Shape Description</b>: The person in the picture has an average build with broad shoulders and a rectangular - shaped body, presenting a balanced and natural male physique.
+        </div>
+        <div style="margin-bottom: 20px; text-align: left;">
+          <b>Beta Parameters</b>:[ 0.4084903  -0.15353578  0.3960117  -0.67583245 -0.35227847 -0.54830325
+          0.32562461  0.48370904  0.62038946  0.3192492 ]
+        </div>
+  
+        <div class="row" style="text-align: center;">
+          <div class="col-md-6">
+            <b>Dancer Image</b>
+            <img src="./images/dancer.png" alt="Example" class="img-fluid" style="max-width: 100%;">
+          </div>
+          <div class="col-md-6">
+            <b>Video Example</b>
+            <video controls class="d-block w-100">
+              <source src="./videos/dataset_demo.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-md-6" style="text-align:left; padding: 15px;">
+      <h4 class="section-subheading" style="margin-top: 40px;">Examples</h4>
+      
+      <div style="margin-bottom: 20px;">
+        <h6>Description</h6>
+        <p style="color: rgb(171, 171, 171)">
+          Some video-pose examples in the GES-X dataset. Original video clips are shown on the left, and the corresponding pose sequences are shown on the right.
+        </p>
+      </div>
+  
+      <div style="margin-bottom: 20px;">
+        <h6>Beta Parameters</h6>
+        <p style="color: rgb(171, 171, 171)">
+          Detailed information about the beta parameters used in the dataset.
+        </p>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <h6>Image Example</h6>
+          <img src="./images/example_image.jpg" alt="Example" class="img-fluid" style="max-width: 100%;">
+        </div>
+        <div class="col-md-6">
+          <h6>Video Example</h6>
+          <video controls class="d-block w-100">
+            <source src="./videos/dataset_demo.mov" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center" style="margin-bottom: -30px">
+        <h2 class="section-heading text-uppercase" style="color: rgb(90, 90, 90); margin-top: 90px">GES-X Statistics</h2>
+        <h3 class="section-subheading" style="color: rgb(171, 171, 171)">Dataset Analysis and Statistics</h3>
+      </div>
+    </div>
+	<h5 class="section-subheading" style="text-align:left; color: rgb(100, 100, 100); margin-top: 20px"> Overview of GES-X Dataset:</h5>
+	    <div class="row justify-content-md-center text-center">
+      <div class="col-md centered" style="padding:1rem;">
+        <img src="./images/dataset_table.jpg" style="width: 90%" class="img-responsive"/> 
+      </div>
+      <p class="text-muted" style="text-align:left; margin-left:15px"> 
+		Statistics comparison of our GES-X with existing ones. The dotted line “- - -” separates
+    whether the posture in the dataset is built based on the mesh. As for the duration of meshed whole body
+    co-speech gesture datasets, our GES-X is 15 times of the second best one (i.e.BEAT2).
+      </p>
+    </div>
+	
+	</br> -->
+</section>
+
+<!-- Model -->
+<section id="model">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center" style="margin-bottom: -30px">
+        <h2 class="section-heading" style="color: rgb(90, 90, 90); margin-top: 30px">ShapeRhythm</h2>
+      </div>
+    </div>
+
+  <h5 class="section-subheading" style="text-align:left; color: rgb(100, 100, 100); margin-top: 20px">Task Introduction</h5>
+    <div class="row text-center">
+      <p class="text-muted" style="text-align:left; margin-left:15px"> 
+        In our work, we focus on the task of generating personalized, music-harmonic, and diverse human dance sequences by utilizing a multi-modal conditional.Details about our task are shown in the figure below:
+      </p>
+    </div>
+    <div class="col-md centered" style="padding:1rem; margin-top: 10px; ">
+      <img src="./images/Fig1.jpg" style="width: 100%" class="img-responsive"/> 
+    </div>
+
+
+</br>
+	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">ShapeRhythm Framework</h5>
+	    <!-- <div class="row justify-content-md-center text-center"> -->
+      <div class="col-md centered" style="padding:1rem; margin-top:20px; ">
+        <img src="./images/pipeline.jpg" style="width: 100%" class="img-responsive"/> 
+      </div>
+      <p class="text-muted" style="text-align:left; margin-left:15px"> 
+      <b>ShapeRhythm</b> mainly consists of two parts, i.e. <b>FreeShape</b> and <b>FreeDance</b>. 
+      <b>FreeShape</b> realizes text-guided freestyle bodyshapes \(\beta\) in SMPL conversion with the textual shape descriptions as inputs.
+      <b>FreeDance</b> is a personalized, harmonic and freestyle dance generation framework via Diffusion Transformer. 
+      FreeDance integrates the diverse music inputs and the rendered diverse SMPL bodys, and finally outputs diverse dance sequences.
+      </p>
+    <!-- </div> -->
+	  </div>
+</section>
+
+<!-- Results -->
+<section id="results">
+  <div class="col-md-12" style="text-align:left">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center" style="margin-bottom: -50px; margin-top: -40px">
+        <h2 class="section-heading" style="color: rgb(90, 90, 90); margin-top: 30px">ShapeRhythm Results</h2>
+        <h3 class="section-subheading" style="color: rgb(171, 171, 171)">Visualization of Our Results </h3
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-12" style="text-align:left">
+  <div class="container">
+    <h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">
+      <b>FreeShape Demo</b></h5>
+      <p style="text-align: left; margin-bottom: 20px; color: rgb(171, 171, 171)">
+        FreeShape is a delicate shape similarity matching approach designed to enhance dance personalization by enabling freestyle and open-vocabulary text-guided body shape conversion
+      </p>
+    <div class="row">
+      <img src="./images/freeshape.jpg" style="width: 100%" class="img-responsive"/> 
+    </div>
+  </div>
+</div>
+<div class="col-md-12" style="text-align:left">
+  <div class="container">
+    <h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)"><b>FreeDance Video</b></h5>
+    <p style="text-align: left; margin-bottom: 20px; color: rgb(171, 171, 171)">
+      FreeDance introduces human shape parameters \(\beta \in \mathbb{R}^{10}\),derived from the Freeshape framework, as an additional condition alongside music melodies 𝑚. FreeDance is designed to generate dance motions that are both shape-aware and music-harmonic by learning to produce denoised ones. 
+    </p>
+    <!-- Carousel -->
+    <h5 class="section-subheading" style="text-align:left; margin-top:50px; color: rgb(100, 100, 100)"><b>Diverse Music </b></h5>
+    <p style="text-align: left; margin-bottom: 20px; color: rgb(171, 171, 171)">
+      This part shows how varying music conditions with a fixed shape results in distinct rhythmic attention patterns and dance motions.
+    </p>
+    <div id="carouselExampleIndicators1" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <video controls class="d-block w-100">
+                <source src="./videos/Varymusic/s0m6.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-md-4">
+              <video controls class="d-block w-100">
+                <source src="./videos/Varymusic/s0m8.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-md-4">
+              <video controls class="d-block w-100">
+                <source src="./videos/Varymusic/s0m9.mov" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h5 class="section-subheading" style="text-align:left; margin-top:50px; color: rgb(100, 100, 100)"><b>Diverse Shape </b></h5>
+    <p style="text-align: left; margin-bottom: 20px; color: rgb(171, 171, 171)">
+      This part demonstrates that under the same music, different shapes exhibit unique rhythmic attention patterns.
+    </p>
+    <div id="carouselExampleIndicators1" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <video controls class="d-block w-100">
+                <source src="./videos/Varyshape/shape3.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-md-4">
+              <video controls class="d-block w-100">
+                <source src="./videos/Varyshape/shape2.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-md-4">
+              <video controls class="d-block w-100">
+                <source src="./videos/Varyshape/shape1.mov" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Experiments -->
+ <section id="experiments">
+  <div class="container">
+ 
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-heading text-uppercase" style="color: rgb(90, 90, 90); margin-top: 30px">Experiments</h2>
+        <h3 class="section-subheading" style="color: rgb(171, 171, 171)">Extensive experiments and comparative results demonstrate that ShapeRhythm surpasses state-of-the-art methods in generating diverse dance movements and achieving motion-music harmony while ensuring high generation quality.</h3>
+      </div>
+    </div>
+	
+
+    <h5 class="section-subheading" style="text-align:left; color: rgb(100, 100, 100); margin-top: 20px">Methods Performance Comparison</h5>
+    <div class="row text-center">
+      <p class="text-muted" style="text-align:left; margin-left:15px"> 
+        Comparison with the state-of-the-art counterparts on ShapeDancer datasets.        
+      </p>
+    <div style="padding:1rem; ">
+      <img src="./images/sota.jpg" style="width: 80%" class="img-responsive"/> 
+    </div>
+    <p class="text-muted" style="text-align:left; margin-left:15px"> 
+    ↑ means the higher the better. <br>
+        ↓ indicates the lower the better. <br> 
+    </p>
+  </div>
+  <div class="container">
+    <p class="text-muted" style="text-align:left; margin-left:15px"> 
+      Visualization results of four methods.        
+    </p>
+    <div id="carouselExampleIndicators1" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-6">
+              <div style="text-align: center;">
+                <b>FACT</b>
+                <video controls class="d-block w-100">
+                  <source src="./videos/Sota/FACT.mov" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div style="text-align: center;">
+                <b>POPDG</b>
+                <video controls class="d-block w-100">
+                  <source src="./videos/Sota/POPDG.mov" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6">
+              <div style="text-align: center;">
+                <b>EDGE</b>
+                <video controls class="d-block w-100">
+                  <source src="./videos/Sota/EDGE.mov" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div style="text-align: center;">
+                <b>ShapeRhythm</b>
+                <video controls class="d-block w-100">
+                  <source src="./videos/Sota/Shape.mov" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</br>
+	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">Experiments on Vertex-based Loss</h5>
+	    <div class="row text-center">
+      <div style="padding:1rem; margin-top:20px; ">
+        <img src="./images/vloss.jpg" style="width: 80%" class="img-responsive"/> 
+      </div>
+      <p class="text-muted" style="text-align:left; margin-left:15px"> 
+      </p>
+    </div>
+	
+	</br>
+	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">Experiments on Shpae-Aware Rhythm Alignment(SARA) and Foot-Ground Interaction(FGI)</h5>
+	<div class="row text-center">
+    <div style="padding:1rem; margin-top:20px; ">
+      <img src="./images/sara.jpg" style="width: 80%" class="img-responsive"/> 
+    </div>
+    <p class="text-muted" style="text-align:left; margin-left:15px"> 
+  </div>
+	  </div> 
+
+</section>
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org/",
+  "@type":"Dataset",
+  "name":"LU-AVS dataset",
+  "description":"First-person (egocentric) video dataset; multi-faceted non-scripted recordings in the wearers' homes, capturing all daily activities in the kitchen over multiple days. Annotations are collected using a novel live audio commentary approach.",
+  "url":"https://github.com/epic-kitchens/annotations",
+  "sameAs":"https://data.bris.ac.uk/data/dataset/3h91syskeag572hl6tvuovwv4d",
+  "citation":"Damen, Dima et al. 'Scaling Egocentric Vision: The EPIC-KITCHENS Dataset', European Conference on Computer Vision, 2018",
+  "identifier": "10.5523/bris.3h91syskeag572hl6tvuovwv4d",
+  "keywords":[
+     "Egocentric vision",
+     "Human actions",
+     "Object interactions",
+     "actions",
+     "video",
+     "kitchens",
+     "cooking",
+     "dataset",
+     "epic kitchens",
+     "epic",
+     "eccv",
+     "2022"
+  ],
+  "creator":{
+     "@type":"Organization",
+     "url": "https://epic-kitchens.github.io/",
+     "name":"EPIC Team",
+     "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType": "technical support",
+        "email":"uob-epic-kitchens@bristol.ac.uk",
+        "url":"https://github.com/epic-kitchens/annotations/issues"
+     }
+  },
+  "distribution":[
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"video/mp4",
+        "contentUrl":"https://data.bris.ac.uk/data/dataset/3h91syskeag572hl6tvuovwv4d"
+     },
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"image/jpeg",
+        "contentUrl":"https://data.bris.ac.uk/data/dataset/3h91syskeag572hl6tvuovwv4d"
+     },
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"text/csv",
+        "contentUrl":"https://github.com/epic-kitchens/annotations"
+     },
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"application/octet-stream",
+        "contentUrl":"https://github.com/epic-kitchens/annotations"
+     }
+  ],
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/"
+}
+</script>
+
+    
+    <!-- Footer -->
+    <footer style="background-color:#373435ff;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img alt="Creative Commons License" style="border-width:1px;float:left;margin-right:15px;margin-bottom:0px;" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png"/>
+            <span class="copyright" style="color:#eee;">Copyright &copy;  (Anonymous Now):</span>
+          </div>
+          <div class="col-md-8">
+            <p style="color:#eee;">For any questions, email us at
+              <a href="mailto:#"> anonymous</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./jquery//bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="./jquery/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="./jquery/agency.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  </body>
+</html>
